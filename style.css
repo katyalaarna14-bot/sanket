@@ -1,0 +1,1196 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #07111f;
+    color: #f5f7fb;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+
+.navbar {
+    height: 78px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: rgba(7,17,31,0.85);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    margin-right: 7px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 34px;
+}
+
+.nav-links a {
+    color: #aeb8c7;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.language-btn {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.language-btn:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 720px;
+    padding: 90px 7%;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 70px;
+    position: relative;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(92, 130, 255, 0.16), transparent 32%),
+        radial-gradient(circle at 85% 70%, rgba(62, 211, 170, 0.10), transparent 30%);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 30px;
+    color: #aeb8c7;
+    background: rgba(255,255,255,0.04);
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(55px, 7vw, 92px);
+    line-height: 0.98;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    background: linear-gradient(90deg, #7b9cff, #62dfc1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content > p {
+    color: #aeb8c7;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 540px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.primary-btn {
+    border: none;
+    background: white;
+    color: #07111f;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(255,255,255,0.15);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: rgba(255,255,255,0.07);
+}
+
+.stats {
+    display: flex;
+    gap: 35px;
+    margin-top: 55px;
+}
+
+.stats div {
+    border-left: 1px solid rgba(255,255,255,0.15);
+    padding-left: 16px;
+}
+
+.stats strong {
+    font-size: 22px;
+}
+
+.stats p {
+    color: #7f8b9d;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* COMMUNICATION CARD */
+
+.communication-card {
+    width: 100%;
+    max-width: 500px;
+    justify-self: center;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 25px;
+    background: rgba(255,255,255,0.045);
+    box-shadow: 0 35px 80px rgba(0,0,0,0.35);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.card-header small {
+    color: #62dfc1;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.card-header h3 {
+    margin-top: 4px;
+    font-size: 17px;
+}
+
+.status {
+    font-size: 12px;
+    color: #9da9b8;
+}
+
+.status span {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #62dfc1;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.camera-area {
+    height: 300px;
+    border-radius: 18px;
+    background:
+        linear-gradient(rgba(255,255,255,0.025), rgba(255,255,255,0.025)),
+        #0b1728;
+    border: 1px dashed rgba(255,255,255,0.14);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.camera-icon {
+    font-size: 75px;
+    margin-bottom: 15px;
+}
+
+.camera-area p {
+    font-size: 15px;
+}
+
+.camera-area small {
+    color: #718096;
+    margin-top: 5px;
+}
+
+.translation {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.translation small {
+    color: #718096;
+    font-size: 11px;
+}
+
+.translation h2 {
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+.translation button {
+    width: 43px;
+    height: 43px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    font-size: 17px;
+}
+
+/* GENERAL SECTIONS */
+
+.features-section,
+.how-section,
+.about-section {
+    padding: 110px 7%;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 55px;
+}
+
+.section-heading span,
+.about-content > span {
+    color: #62dfc1;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2,
+.about-content h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.05;
+    margin: 14px 0;
+    letter-spacing: -2px;
+}
+
+.section-heading p {
+    color: #8290a4;
+    line-height: 1.6;
+}
+
+/* FEATURES */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.feature-card {
+    padding: 28px;
+    min-height: 250px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.035);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.06);
+}
+
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.feature-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #8290a4;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.feature-card button {
+    margin-top: 22px;
+    border: none;
+    background: none;
+    color: #62dfc1;
+    font-weight: 600;
+}
+
+.emergency {
+    border-color: rgba(255,100,100,0.15);
+}
+
+/* HOW IT WORKS */
+
+.how-section {
+    background: #091523;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.step {
+    display: flex;
+    gap: 20px;
+}
+
+.step-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 30px;
+    color: #62dfc1;
+    font-weight: 700;
+}
+
+.step h3 {
+    margin-bottom: 9px;
+}
+
+.step p {
+    color: #8290a4;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ABOUT */
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-content h2 {
+    max-width: 600px;
+}
+
+.about-content p {
+    color: #8290a4;
+    line-height: 1.8;
+    max-width: 570px;
+    margin-top: 20px;
+}
+
+.about-visual {
+    height: 450px;
+    position: relative;
+    border-radius: 30px;
+    background:
+        radial-gradient(circle, rgba(98,223,193,0.12), transparent 50%),
+        #0b1728;
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-hand {
+    font-size: 130px;
+}
+
+.floating-card {
+    position: absolute;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    font-size: 13px;
+}
+
+.card-one {
+    top: 60px;
+    left: 35px;
+}
+
+.card-two {
+    top: 120px;
+    right: 25px;
+}
+
+.card-three {
+    bottom: 65px;
+    left: 90px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 50px 7%;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+footer p {
+    color: #718096;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+footer .copyright {
+    margin-top: 25px;
+    font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+    }
+
+    .communication-card {
+        max-width: 600px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .language-btn {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .hero,
+    .features-section,
+    .how-section,
+    .about-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .stats {
+        gap: 15px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .camera-area {
+        height: 250px;
+    }
+}
+/* CAMERA */
+
+#camera {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    display: none;
+}
+
+.camera-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    color: #07111f;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.camera-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+/* HAND DETECTION */
+
+.camera-area {
+    position: relative;
+    overflow: hidden;
+}
+
+#handCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: block;
+}
+
+#camera {
+    transform: scaleX(-1);
+}
+#voiceText {
+    margin-top: 12px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 15px;
+    min-height: 20px;
+}
+/* ===============================
+   REVERSE COMMUNICATION
+   =============================== */
+
+.reverse-section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.reverse-card {
+    max-width: 700px;
+    margin: 30px auto 0;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#signInput {
+    width: 100%;
+    min-height: 120px;
+    padding: 16px;
+    border: none;
+    border-radius: 14px;
+    resize: vertical;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+#signOutput {
+    margin-top: 20px;
+    padding: 25px;
+    min-height: 60px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ===============================
+   SIGN VISUAL OUTPUT
+   =============================== */
+
+.sign-display {
+    text-align: center;
+    padding: 10px;
+}
+
+.sign-emoji {
+    font-size: 70px;
+    margin-bottom: 8px;
+}
+
+.sign-display h2 {
+    margin: 5px 0;
+    font-size: 26px;
+}
+
+.sign-display p {
+    margin: 5px 0;
+    opacity: 0.75;
+    font-size: 16px;
+}
+/* ===============================
+   LEARN SIGNS CARDS
+   =============================== */
+
+.learn-signs {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.learn-sign {
+    flex: 1;
+    padding: 12px 6px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.07);
+    text-align: center;
+}
+
+.learn-emoji {
+    font-size: 35px;
+    margin-bottom: 6px;
+}
+
+.learn-sign strong {
+    display: block;
+    font-size: 13px;
+}
+
+.learn-sign span {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    opacity: 0.7;
+}
+/* ===============================
+   EMERGENCY MODE
+   =============================== */
+
+.emergency-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.emergency-options button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.emergency-options button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.15);
+}
+/* ===============================
+   SANKET - PREMIUM UI POLISH
+   =============================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Smooth sections */
+section {
+    position: relative;
+}
+
+/* Section headings */
+.section-heading {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-heading span {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+}
+
+/* Feature cards */
+.feature-card {
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(98, 223, 193, 0.35);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* Buttons */
+button {
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Camera area */
+.camera-area {
+    overflow: hidden;
+    position: relative;
+}
+
+.camera-area video {
+    border-radius: 18px;
+}
+
+#handCanvas {
+    border-radius: 18px;
+}
+
+/* Detection result */
+#gestureResult {
+    transition: 0.3s ease;
+}
+
+/* Voice text */
+#voiceText {
+    transition: 0.3s ease;
+}
+
+/* Reverse communication */
+.reverse-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.reverse-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Sign output */
+#signOutput {
+    transition: 0.3s ease;
+}
+
+.sign-display {
+    animation: signAppear 0.35s ease;
+}
+
+@keyframes signAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Learn signs */
+.learn-sign {
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.learn-sign:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Emergency buttons */
+.emergency-options button {
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.emergency-options button:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    .learn-signs {
+        flex-direction: column;
+    }
+
+    .emergency-options {
+        grid-template-columns: 1fr;
+    }
+
+    .reverse-card {
+        padding: 20px;
+    }
+
+    .sign-emoji {
+        font-size: 58px;
+    }
+}
+/* ===============================
+   HERO SECTION POLISH
+   =============================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: rgba(98, 223, 193, 0.08);
+    filter: blur(80px);
+    top: -180px;
+    right: -100px;
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(98, 223, 193, 0.05);
+    filter: blur(70px);
+    bottom: -150px;
+    left: -100px;
+    pointer-events: none;
+}
+
+.hero h1 {
+    letter-spacing: -1px;
+}
+
+.hero p {
+    max-width: 680px;
+    line-height: 1.7;
+}
+
+/* Hero buttons */
+.hero button {
+    min-width: 150px;
+}
+
+/* Make hero content stay above glow */
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Accessibility-focused highlight */
+.hero .highlight,
+.hero .accent {
+    color: #62dfc1;
+}
+
+/* Mobile hero */
+@media (max-width: 768px) {
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+}
+/* ===============================
+   COMMUNICATION HUB POLISH
+   =============================== */
+
+.camera-area {
+    border: 1px solid rgba(98, 223, 193, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+#gestureResult,
+#voiceText {
+    margin-top: 12px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: rgba(98, 223, 193, 0.06);
+    border: 1px solid rgba(98, 223, 193, 0.1);
+    text-align: center;
+}
+
+.translation {
+    margin-top: 20px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.translation h2 {
+    margin-top: 5px;
+}
+
+.translation button {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.camera-btn {
+    margin-top: 12px;
+}
+/* ===============================
+   REVERSE COMMUNICATION POLISH
+   =============================== */
+
+.reverse-section {
+    position: relative;
+}
+
+.reverse-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.reverse-card::before {
+    content: "SPEAK • TYPE • SIGN";
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    opacity: 0.35;
+    font-weight: 700;
+}
+
+#signInput {
+    background: rgba(255, 255, 255, 0.95);
+    color: #111;
+    border: 2px solid transparent;
+    transition: 0.25s ease;
+}
+
+#signInput:focus {
+    border-color: #62dfc1;
+    box-shadow: 0 0 0 4px rgba(98, 223, 193, 0.08);
+}
+
+#signInput::placeholder {
+    color: #777;
+}
+
+#signOutput {
+    border: 1px solid rgba(98, 223, 193, 0.12);
+}
+
+.sign-display {
+    width: 100%;
+}
+
+.sign-display .sign-emoji {
+    line-height: 1;
+}
+
+.sign-display h2 {
+    letter-spacing: 1px;
+}
+
+.sign-display p {
+    opacity: 0.65;
+}
+/* ===============================
+   LEARN SIGNS PREMIUM CARDS
+   =============================== */
+
+.learn-signs {
+    margin-top: 24px;
+    gap: 14px;
+}
+
+.learn-sign {
+    position: relative;
+    overflow: hidden;
+    min-height: 115px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(98, 223, 193, 0.1);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.learn-sign::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(98, 223, 193, 0.06);
+    filter: blur(20px);
+}
+
+.learn-sign:hover {
+    transform: translateY(-6px);
+    border-color: rgba(98, 223, 193, 0.3);
+}
+
+.learn-emoji {
+    position: relative;
+    font-size: 42px;
+}
+
+.learn-sign strong,
+.learn-sign span {
+    position: relative;
+}
+/* ===============================
+   NAVBAR POLISH
+   =============================== */
+
+nav,
+.navbar,
+header {
+    position: relative;
+    z-index: 100;
+}
+
+nav a,
+.navbar a,
+header a {
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+nav a:hover,
+.navbar a:hover,
+header a:hover {
+    opacity: 0.75;
+}
+
+/* SANKET brand */
+.logo,
+.brand,
+.nav-logo {
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Prevent navigation from looking crowded on smaller screens */
+@media (max-width: 768px) {
+
+    nav,
+    .navbar {
+        gap: 12px;
+    }
+
+    nav a,
+    .navbar a {
+        font-size: 13px;
+    }
+}

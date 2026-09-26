@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanket | Sign. Speak. Connect.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <span>🤟</span> SANKET
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how">How It Works</a>
+            <a href="#about">About</a>
+        </div>
+
+        <button class="language-btn" onclick="changeLanguage()">
+            EN / हिन्दी
+        </button>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🤟 Accessible Communication
+            </div>
+
+            <h1>
+                Sign. Speak.
+                <span>Connect.</span>
+            </h1>
+
+            <p id="heroText">
+                Breaking communication barriers with
+                sign language, voice and technology.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="startCommunication()">
+                    Start Communication →
+                </button>
+
+                <button class="secondary-btn" onclick="learnMore()">
+                    Explore Sanket
+                </button>
+            </div>
+
+            <div class="stats">
+                <div>
+                    <strong>🤟</strong>
+                    <p>Sign Recognition</p>
+                </div>
+
+                <div>
+                    <strong>🎙️</strong>
+                    <p>Voice Support</p>
+                </div>
+
+                <div>
+                    <strong>🌐</strong>
+                    <p>Multilingual</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Communication Card -->
+        <div class="communication-card">
+
+            <div class="card-header">
+                <div>
+                    <small>SANKET LIVE</small>
+                    <h3>Communication Hub</h3>
+                </div>
+
+                <div class="status">
+                    <span></span> Ready
+                </div>
+            </div>
+
+            <div class="camera-area">
+    <video id="camera" autoplay playsinline></video>
+<canvas id="handCanvas"></canvas>
+
+    <div id="cameraMessage">
+        <div class="camera-icon">📷</div>
+        <p>Camera preview</p>
+        <small>Click Start Camera below</small>
+    </div>
+</div>
+<div id="gestureResult">
+    Gesture: Waiting...
+</div>
+<div id="voiceText">
+    Voice input will appear here...
+</div>
+<button class="camera-btn" onclick="startCamera()">
+    📷 Start Camera
+</button>
+
+            <div class="translation">
+                <div>
+                    <small>Detected Sign</small>
+                    <h2 id="detectedText">Waiting...</h2>
+                </div>
+
+               <button onclick="speakDetectedText()">
+    🔊
+</button>
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- Reverse Communication -->
+<section class="reverse-section">
+
+    <div class="section-heading">
+        <span>SANKET REVERSE</span>
+        <h2>Speak. Type. Sign.</h2>
+        <p>
+            Convert voice or text into visual sign guidance.
+        </p>
+    </div>
+
+    <div class="reverse-card">
+
+        <textarea
+            id="signInput"
+            placeholder="Type something like Hello, Help or Yes..."
+        ></textarea>
+
+        <button
+            class="camera-btn"
+            onclick="convertToSign()"
+        >
+            🤟 Convert to Sign
+        </button>
+
+        <div id="signOutput">
+            Your visual sign will appear here.
+        </div>
+
+    </div>
+
+</section>
+    <!-- Features -->
+    <section class="features-section" id="features">
+
+        <div class="section-heading">
+            <span>WHAT SANKET OFFERS</span>
+            <h2>Communication without barriers.</h2>
+            <p>
+                One platform connecting sign language,
+                voice and text.
+            </p>
+        </div>
+
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">🤟</div>
+                <h3>Sign Recognition</h3>
+                <p>
+                    Use your camera to recognize supported
+                    sign-language gestures.
+                </p>
+                <button onclick="openFeature('sign')">
+                    Try it →
+                </button>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">🎙️</div>
+                <h3>Voice to Text</h3>
+                <p>
+                    Speak naturally and convert your voice
+                    into readable text.
+                </p>
+                <button onclick="startVoice()">
+                    Try it →
+                </button>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">🔊</div>
+                <h3>Text to Voice</h3>
+                <p>
+                    Convert written communication into
+                    natural spoken audio.
+                </p>
+                <button onclick="speakText('Welcome to Sanket')">
+                    Try it →
+                </button>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Hindi + English</h3>
+                <p>
+                    Communicate using multiple languages
+                    for a more inclusive experience.
+                </p>
+                <button onclick="changeLanguage()">
+                    Switch →
+                </button>
+            </div>
+
+
+           <div class="feature-card">
+    <div class="feature-icon">📚</div>
+
+    <h3>Learn Signs</h3>
+
+    <p>
+        Practice commonly used signs with
+        simple visual guidance.
+    </p>
+
+    <div class="learn-signs">
+
+        <div class="learn-sign">
+            <div class="learn-emoji">👋</div>
+            <strong>HELLO</strong>
+            <span>Open Palm</span>
+        </div>
+
+        <div class="learn-sign">
+            <div class="learn-emoji">✊</div>
+            <strong>HELP</strong>
+            <span>Closed Fist</span>
+        </div>
+
+        <div class="learn-sign">
+            <div class="learn-emoji">👍</div>
+            <strong>YES</strong>
+            <span>Thumbs Up</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+            <div class="feature-card emergency">
+    <div class="feature-icon">🚨</div>
+
+    <h3>Emergency Mode</h3>
+
+    <p>
+        Quickly communicate urgent needs
+        using common emergency signs.
+    </p>
+
+    <div class="emergency-options">
+
+        <button onclick="speakText('Help')">
+            🆘 HELP
+        </button>
+
+        <button onclick="speakText('I need a hospital')">
+            🏥 HOSPITAL
+        </button>
+
+        <button onclick="speakText('Police')">
+            👮 POLICE
+        </button>
+
+        <button onclick="speakText('Fire')">
+            🔥 FIRE
+        </button>
+
+        <button onclick="speakText('Danger')">
+            ⚠️ DANGER
+        </button>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- How it works -->
+    <section class="how-section" id="how">
+
+        <div class="section-heading">
+            <span>HOW IT WORKS</span>
+            <h2>From gesture to communication.</h2>
+        </div>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">01</div>
+                <div>
+                    <h3>Show a Sign</h3>
+                    <p>
+                        Use your camera to show a supported
+                        sign-language gesture.
+                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <div>
+                    <h3>Sanket Recognizes It</h3>
+                    <p>
+                        The system processes the gesture
+                        and identifies the supported sign.
+                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <div>
+                    <h3>Communicate</h3>
+                    <p>
+                        The result can be displayed as text
+                        and converted into voice.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about-section" id="about">
+
+        <div class="about-content">
+
+            <span>WHY SANKET?</span>
+
+            <h2>
+                Technology should make
+                communication easier.
+            </h2>
+
+            <p>
+                Sanket is designed as an accessibility-focused
+                communication platform that brings together
+                sign language, voice and multilingual text.
+            </p>
+
+            <p>
+                The goal is simple: make conversations more
+                accessible between people who communicate
+                differently.
+            </p>
+
+        </div>
+
+        <div class="about-visual">
+            <div class="big-hand">🤟</div>
+            <div class="floating-card card-one">
+                💬 Hello
+            </div>
+            <div class="floating-card card-two">
+                🔊 Namaste
+            </div>
+            <div class="floating-card card-three">
+                ❤️ Connect
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            🤟 SANKET
+        </div>
+
+        <p>
+            Sign. Speak. Connect.
+        </p>
+
+        <p class="copyright">
+            © 2026 Sanket. Built for accessible communication.
+        </p>
+
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
